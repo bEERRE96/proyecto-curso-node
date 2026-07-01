@@ -141,7 +141,7 @@ async function loginModel({ username, password }) {
     const userDoc = querySnapshot.docs[0];
     const userData = userDoc.data();
 
-    let comparePass = bcrypt.compare(pass, userData.password);
+    let comparePass = await bcrypt.compare(pass, userData.password);
 
     if (!comparePass) {
       customError({

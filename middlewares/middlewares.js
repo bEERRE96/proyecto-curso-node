@@ -49,7 +49,7 @@ function loginData(req, res, next) {
 
   if (!passwordRegex.test(password)) {
     return res.status(400).json({
-      msg: "La contraseña debe tener entre 6 y 20 caracteres.",
+      msg: "La contraseña debe tener entre 4 y 20 caracteres.",
     });
   }
 
