@@ -4,7 +4,7 @@ import cors from "cors";
 import { AuthRoutes, ProductRoutes } from "./routes/routes.js";
 
 const app = express();
-const PORT = process.env.SERVER_PORT || 3001;
+const PORT = process.env.PORT || 3001;
 const URL_FRONT = process.env.WEB_FRONT || "*";
 const corsOptions = {
   origin: URL_FRONT,
